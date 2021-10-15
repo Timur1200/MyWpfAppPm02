@@ -1,0 +1,24 @@
+﻿<Page x:Class="WpfAppPM02.Pages.User.PersonalDataPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfAppPM02.Pages.User"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PersonalDataPage">
+
+    <Grid>
+        <StackPanel Margin="50">
+            <TextBlock FontSize="18" Text="1" Name="LoginTextBlock"/>
+            <TextBlock />
+
+            <TextBlock  FontSize="18" Text="2" Name="FioTextBlock"/>
+            <TextBlock />
+
+            <TextBlock  FontSize="18" Text="3" Name="AccessTextBlock"/>
+            <TextBlock />
+        </StackPanel>
+        
+    </Grid>
+</Page>

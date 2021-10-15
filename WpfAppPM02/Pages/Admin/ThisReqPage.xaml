@@ -1,0 +1,33 @@
+﻿<Page x:Class="WpfAppPM02.Pages.Admin.ThisReqPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfAppPM02.Pages.Admin"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ThisReqPage" Loaded="Page_Loaded">
+
+    <Grid>
+        <StackPanel Margin="50">
+            <TextBlock HorizontalAlignment="Center" Name="TextBlockTheme" FontSize="18" Text="1" />
+            <TextBlock />
+            <TextBlock x:Name="TextBlockStatus"  FontSize="18" Text="Статус:" />
+            <TextBlock />
+            <TextBlock x:Name="TextBlockDate"  FontSize="18" Text="Дата отправки: " />
+            <TextBlock x:Name="TBlockUser" Text="Фио отправителя:" FontSize="18" Margin="0,10" />
+            <TextBlock   FontSize="18" Text="Описание:" />
+            <TextBox IsReadOnly="True" AcceptsReturn="True" x:Name="TextBoxDesc" />
+            <TextBlock x:Name="TextBlockSpec" />
+            <ComboBox DisplayMemberPath="FIo" Name="ComboBoxSelectSpec" />
+            <TextBlock />
+            <TextBox IsReadOnly="True" Visibility="Hidden" AcceptsReturn="True" x:Name="TextBoxAns" />
+            <TextBlock x:Name="TBlockTe" Text="Использованные материалы:" Visibility="Hidden" />
+            <ListBox Name="LBoxItems" Visibility="Hidden"/>
+            <TextBlock />
+            
+            <Button x:Name="Btn" Click="BtnClick" HorizontalAlignment="Center"  Content="Отправить" />
+        </StackPanel>
+
+    </Grid>
+</Page>

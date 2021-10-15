@@ -1,0 +1,28 @@
+﻿<Page x:Class="WpfAppPM02.Pages.User.UserMainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfAppPM02.Pages.User"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="UserMainPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.25*"></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <GridSplitter Background="Gold" HorizontalAlignment="Center" VerticalAlignment="Stretch" Grid.Column="1" ShowsPreview="False" Width="5"
+          />
+        <StackPanel Background="Beige">
+            <Button Content="Назад" Click="BackClick" />
+            <Button Content="Личная информация" Click="PersonalDataPageClick" />
+            <Button Content="Запрос" Click="QueryPageClick" />
+        </StackPanel>
+
+        <Frame Grid.Column="2" x:Name="Frame2" />
+
+    </Grid>
+</Page>

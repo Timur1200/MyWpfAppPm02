@@ -1,0 +1,22 @@
+﻿<Window x:Class="WpfAppPM02.Windows.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppPM02.Windows"
+        mc:Ignorable="d"
+        Title="" Height="700" Width="1200" Icon="..\Resources\iconWpf.jpg">
+    <DockPanel>
+        <Menu FontSize="20" DockPanel.Dock="Top">
+            <MenuItem Click="ReAuthClick" Header="Сменить пользователя"   />
+            
+            <MenuItem Click="ChangePasswordClick" Header="Сменить пароль"   />
+            <MenuItem Header="Главная" Click="GoToGeneralPageClick"  />
+            <MenuItem Header="Справка"   />
+          
+        </Menu>
+        <TextBlock Name="TBlock1" Text="" DockPanel.Dock="Top" HorizontalAlignment="Center" />
+
+        <Frame x:Name="AdminWindowFrame" NavigationUIVisibility="Hidden" />
+    </DockPanel>
+</Window>
