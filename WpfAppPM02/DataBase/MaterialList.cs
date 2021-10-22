@@ -22,9 +22,6 @@ namespace WpfAppPM02.DataBase
         public virtual Quire Quire { get; set; }
         public virtual Storage Storage { get; set; }
 
-     public override string ToString()
-        {
-            return Storage.MaterialName + " X " + AmountInList + "шт.";
-        }
+     
     }
 }

@@ -28,19 +28,7 @@ namespace WpfAppPM02.DataBase
         public Nullable<int> Amount { get; set; }
         public byte[] Img { get; set; }
 
-       public BitmapSource Img1 { get 
-            {
-                if (Img != null) try { return (BitmapSource)new ImageSourceConverter().ConvertFrom(Img); }
-                    catch { return null; }
-                return null;
-            } 
-             }
-
-        public override string ToString()
-        {
-            return MaterialName + " ;Цена:" + Price + " ;В наличии:" + Amount;
-        }
-
+      
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MaterialList> MaterialList { get; set; }
     }

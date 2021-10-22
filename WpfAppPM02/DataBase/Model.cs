@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
-
+using System.Windows.Media.Imaging;
+using System.Windows.Media;
 
 namespace WpfAppPM02.DataBase
 {
-    #region Специалист
+    
     public partial class Spec
     {
         public string TextStatus
@@ -59,9 +60,15 @@ namespace WpfAppPM02.DataBase
 
 
     }
-    #endregion
 
-    #region Quire
+public partial class MaterialList
+    {
+        public override string ToString()
+        {
+            return Storage.MaterialName + " X " + AmountInList + "шт.";
+        }
+    }
+    
 
     public partial class Quire
     {
@@ -77,6 +84,25 @@ namespace WpfAppPM02.DataBase
         }
     }
 
-    #endregion
+  
+
+    public partial class Storage
+    {
+        public BitmapSource Img1
+        {
+            get
+            {
+                if (Img != null) try { return (BitmapSource)new ImageSourceConverter().ConvertFrom(Img); }
+                    catch { return null; }
+                return null;
+            }
+        }
+
+        public override string ToString()
+        {
+            return MaterialName + " ;Цена:" + Price + " ;В наличии:" + Amount;
+        }
+
+    }
 
 }
