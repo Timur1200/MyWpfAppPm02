@@ -58,6 +58,7 @@ namespace WpfAppPM02.Windows
         }
         private void AuthClick(object sender, RoutedEventArgs e)
         {
+            if (ChechBoxPass.IsChecked.Value) PassBox.Password = PassBox1.Text;
 
             try
             {
@@ -146,6 +147,32 @@ namespace WpfAppPM02.Windows
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
            
+        }
+        private int i = 0;
+        private void LoginTextBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            i++;
+            if (i == 3)
+            {
+                PanelAdmin.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void ChechBoxPass_Checked(object sender, RoutedEventArgs e)
+        {
+           
+            if (ChechBoxPass.IsChecked.Value)
+            {
+                PassBox1.Visibility = Visibility.Visible;
+                PassBox.Visibility = Visibility.Collapsed;
+                PassBox1.Text = PassBox.Password;
+            }
+            else
+            {
+                PassBox1.Visibility = Visibility.Collapsed;
+                PassBox.Visibility = Visibility.Visible;
+                PassBox.Password = PassBox1.Text;
+            }
         }
     }
 }

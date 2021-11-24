@@ -33,6 +33,8 @@ namespace WpfAppPM02.Pages.SpecPages
             else if (quire.Status == 1) QuireStatus = "На рассмотрение";
             else QuireStatus = "Завершен";
             TextBlockStatus.Text += $" {QuireStatus}";
+            
+
            if (quire.Status==2)
             {
                 LBox.Visibility = Visibility.Hidden;
@@ -45,9 +47,24 @@ namespace WpfAppPM02.Pages.SpecPages
                 return;
             }
             TextBlockDate.Text += quire.Date1D;
-           
+            if (Session.Access == 0)
+            {
+                LBox.Visibility = Visibility.Hidden;
+                Btn.Visibility = Visibility.Hidden;
+                Btn1.Visibility = Visibility.Hidden;
+                Btn2.Visibility = Visibility.Hidden;
+                
+                if (TBoxAns.Text.Length == 0)
+                {
+                    TBoxAns.Visibility = Visibility.Hidden;
+                }
+            }
         }
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            LBox.ItemsSource = Data.SelectMaterialList(quire);
 
+        }
         private void BtnClick(object sender, RoutedEventArgs e)
         {
             using (MyModel db = new MyModel())
@@ -63,11 +80,7 @@ namespace WpfAppPM02.Pages.SpecPages
             }
         }
 
-        private void Page_Loaded(object sender, RoutedEventArgs e)
-        {
-            LBox.ItemsSource = Data.SelectMaterialList(quire);
-            
-        }
+       
 
         private void BtnClick1(object sender, RoutedEventArgs e)
         {
