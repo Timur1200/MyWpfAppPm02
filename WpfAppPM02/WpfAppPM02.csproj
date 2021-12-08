@@ -85,14 +85,41 @@
     </ApplicationDefinition>
     <Compile Include="DataBase\Data.cs" />
     <Compile Include="DataBase\MaterialList.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ModelDb.tt</DependentUpon>
     </Compile>
     <Compile Include="DataBase\Model.cs" />
+    <Compile Include="DataBase\ModelDb.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDb.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\ModelDb.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\ModelDb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelDb.edmx</DependentUpon>
+    </Compile>
     <Compile Include="DataBase\Quire.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ModelDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\Roli.cs">
+      <DependentUpon>ModelDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\Spec.cs">
+      <DependentUpon>ModelDb.tt</DependentUpon>
     </Compile>
     <Compile Include="DataBase\Storage.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ModelDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\sysdiagrams.cs">
+      <DependentUpon>ModelDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\Users.cs">
+      <DependentUpon>ModelDb.tt</DependentUpon>
     </Compile>
     <Compile Include="Pages\Admin\AccountingPage.xaml.cs">
       <DependentUpon>AccountingPage.xaml</DependentUpon>
@@ -248,30 +275,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DataBase\Model1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataBase\Model1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataBase\Model1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="DataBase\Roli.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataBase\Spec.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataBase\Users.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="MyClass\Nav.cs" />
     <Compile Include="MyClass\Session.cs" />
     <Compile Include="Pages\SpecPages\MainSpecPage.xaml.cs">
@@ -320,12 +323,12 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EntityDeploy Include="DataBase\Model1.edmx">
+    <EntityDeploy Include="DataBase\ModelDb.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+      <LastGenOutput>ModelDb.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="DataBase\Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
+    <None Include="DataBase\ModelDb.edmx.diagram">
+      <DependentUpon>ModelDb.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -352,23 +355,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DataBase\DatabasePM02.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="DataBase\DatabasePM02_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>DatabasePM02.mdf</DependentUpon>
-    </Content>
-    <Content Include="DataBase\Model1.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </Content>
-    <Content Include="DataBase\Model1.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
-    </Content>
     <Resource Include="Resources\iconWpf.jpg" />
     <Resource Include="Resources\PngFile1.png" />
   </ItemGroup>
@@ -403,6 +389,18 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataBase\ModelDb.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelDb.edmx</DependentUpon>
+      <LastGenOutput>ModelDb.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DataBase\ModelDb.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelDb.edmx</DependentUpon>
+      <LastGenOutput>ModelDb.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

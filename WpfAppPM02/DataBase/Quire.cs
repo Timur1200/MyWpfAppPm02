@@ -34,7 +34,5 @@ namespace WpfAppPM02.DataBase
         public virtual ICollection<MaterialList> MaterialList { get; set; }
         public virtual Users Users { get; set; }
         public virtual Spec Spec { get; set; }
-
-      
     }
 }

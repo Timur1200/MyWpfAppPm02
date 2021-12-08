@@ -26,11 +26,9 @@ namespace WpfAppPM02.DataBase
         public string Login { get; set; }
         public string Pass { get; set; }
         public Nullable<bool> Status { get; set; }
-
     
-
-        public virtual Roli Roli { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Quire> Quire { get; set; }
+        public virtual Roli Roli { get; set; }
     }
 }

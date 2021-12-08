@@ -11,9 +11,7 @@ namespace WpfAppPM02.DataBase
 {
     using System;
     using System.Collections.Generic;
-    using System.Windows.Media;
-    using System.Windows.Media.Imaging;
-
+    
     public partial class Storage
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -27,8 +25,7 @@ namespace WpfAppPM02.DataBase
         public Nullable<int> Price { get; set; }
         public Nullable<int> Amount { get; set; }
         public byte[] Img { get; set; }
-
-      
+    
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MaterialList> MaterialList { get; set; }
     }

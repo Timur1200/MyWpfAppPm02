@@ -17,8 +17,8 @@ namespace WpfAppPM02.DataBase
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Roli()
         {
-            this.Users = new HashSet<Users>();
             this.Spec = new HashSet<Spec>();
+            this.Users = new HashSet<Users>();
         }
     
         public int IdRoli { get; set; }
@@ -26,8 +26,8 @@ namespace WpfAppPM02.DataBase
         public Nullable<int> Access { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Users> Users { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Spec> Spec { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Users> Users { get; set; }
     }
 }

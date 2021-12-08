@@ -21,7 +21,5 @@ namespace WpfAppPM02.DataBase
     
         public virtual Quire Quire { get; set; }
         public virtual Storage Storage { get; set; }
-
-     
     }
 }
