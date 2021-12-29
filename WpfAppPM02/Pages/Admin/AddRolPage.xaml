@@ -10,14 +10,14 @@
 
     <Grid>
         <StackPanel Height="auto"  Margin="40" VerticalAlignment="Center">
-            <TextBlock Text="Наименование роли" HorizontalAlignment="Center" />
-                        <TextBox Name="NameTextBox" />
-            <TextBlock Text="Модификатор доступа" HorizontalAlignment="Center" />
-            <ComboBox x:Name="AccessComboBox"/>
+            <TextBlock FontSize="18" Text="Наименование роли" HorizontalAlignment="Center" />
+            <TextBox FontSize="18" Name="NameTextBox" />
+            <TextBlock FontSize="18" Text="Модификатор доступа" HorizontalAlignment="Center" />
+            <ComboBox FontSize="18" x:Name="AccessComboBox"/>
             <TextBlock />
-            <Button Click="AddClick" Content="Добавить" />
+            <Button FontSize="18" Click="AddClick" Content="Добавить" />
             <TextBlock />
-            <Button Click="BackClick" Content="Назад" />
+            <Button FontSize="18" Click="BackClick" Content="Назад" />
             
         </StackPanel>
         

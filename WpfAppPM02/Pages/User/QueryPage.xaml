@@ -14,7 +14,7 @@
             <RowDefinition Height="0.25*"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <DataGrid SelectionChanged="DataGridReq_SelectionChanged"  IsReadOnly="True" AutoGenerateColumns="False" x:Name="DataGridReq">
+        <DataGrid FontSize="17" SelectionChanged="DataGridReq_SelectionChanged"  IsReadOnly="True" AutoGenerateColumns="False" x:Name="DataGridReq">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Номер запроса" Binding="{Binding IdQuire}" />
                 <DataGridTextColumn Header="Тема" Binding="{Binding Theme}" />

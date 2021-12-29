@@ -17,9 +17,9 @@
         <GridSplitter Background="Gold" HorizontalAlignment="Center" VerticalAlignment="Stretch" Grid.Column="1" ShowsPreview="False" Width="5"
           />
         <StackPanel Background="Beige">
-            <Button Content="Назад" Click="BackClick" />
-            <Button Content="Личная информация" Click="PersonalDataPageClick" />
-            <Button Content="Запрос" Click="QueryPageClick" />
+            <Button Foreground="DarkBlue" FontSize="20" Height="30" Content="Назад" Click="BackClick" />
+            <Button Foreground="DarkBlue" FontSize="20" Height="30" Content="Личная информация" Click="PersonalDataPageClick" />
+            <Button Foreground="DarkBlue" FontSize="20" Height="30" Content="Запрос" Click="QueryPageClick" />
         </StackPanel>
 
         <Frame Grid.Column="2" x:Name="Frame2" />

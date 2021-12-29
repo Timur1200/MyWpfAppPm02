@@ -20,7 +20,7 @@
                 <DataGridTextColumn Header="Тема" Binding="{Binding Theme}" />
                 <DataGridTextColumn Header="Дата завершения" Binding="{Binding Date2D}" />
                 <DataGridTextColumn Header="Специалист" Binding="{Binding Spec.FIo}" />
-                <DataGridTextColumn x:Name="DataGridColumnStatus" Header="Статус" Binding="{Binding Test}" />
+               
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>

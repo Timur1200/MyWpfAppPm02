@@ -17,11 +17,11 @@
         <GridSplitter Background="Gold" HorizontalAlignment="Center" VerticalAlignment="Stretch" Grid.Column="1" ShowsPreview="False" Width="5"
           />
         <StackPanel Background="Beige">
-            <Button Content="Назад" Click="BackClick" />
-            <Button Content="Личная информация" Click="PersonalDataPageClick" />
-            <Button Content="Текущие Вызовы" Click="QueryPageClick" />
-            <Button Content="Управление складом" Click="StorageClick" />
-            <Button Content="Список материалов" Click="ListClick" />
+            <Button Foreground="DarkBlue" FontSize="20" Height="30" Content="Назад" Click="BackClick" />
+            <Button Foreground="DarkBlue" FontSize="20" Height="30" Content="Личная информация" Click="PersonalDataPageClick" />
+            <Button Foreground="DarkBlue" FontSize="20" Height="30" Content="Текущие Вызовы" Click="QueryPageClick" />
+            <Button Foreground="DarkBlue" FontSize="20" Height="30" Content="Управление складом" Click="StorageClick" />
+            <Button Foreground="DarkBlue" FontSize="20" Height="30" Content="Список материалов" Click="ListClick" />
         </StackPanel>
 
         <Frame Grid.Column="2" x:Name="Frame2" />
