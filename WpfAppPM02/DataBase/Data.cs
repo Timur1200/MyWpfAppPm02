@@ -39,9 +39,10 @@ namespace WpfAppPM02.DataBase
         {
             using (MyModel db = new MyModel())
             {
+              //  db.Spec.Attach(mSpec);
                 db.Quire.Attach(mQuire);
-                db.Spec.Attach(mSpec);
-               // mSpec.Status = true;
+               
+               
                 mQuire.Status = 1;
                 mQuire.SpecId = mSpec.IdSpec;
                 db.SaveChanges();
