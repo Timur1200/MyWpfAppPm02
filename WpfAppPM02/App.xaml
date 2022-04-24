@@ -4,38 +4,13 @@
              xmlns:local="clr-namespace:WpfAppPM02"
              StartupUri="Windows/LoginWindow.xaml">
     <Application.Resources>
-
-        <!--ResourceDictionary>
+        <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Purple.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
             </ResourceDictionary.MergedDictionaries>
-
-
-            <Style TargetType="TextBlock">
-                <Setter Property="VerticalAlignment" Value="Center"
-></Setter>
-                <Setter Property="HorizontalAlignment" Value="Center"></Setter>
-
-
-            </Style>
-
-
-
-
-            <Style TargetType="WrapPanel" x:Key="WrapPanelTest">
-                <Setter Property="ItemWidth" Value="150" />
-                <Setter Property="MaxWidth" Value="150" />
-                <Setter Property="Background" Value="#1234" />
-                <Setter Property="ItemHeight" Value="30" />
-                <Setter Property="Margin" Value="3" />
-
-            </Style>
-        </ResourceDictionary-->
-
-
-
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

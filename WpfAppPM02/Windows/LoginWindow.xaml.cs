@@ -33,7 +33,7 @@ namespace WpfAppPM02.Windows
         public LoginWindow()
         {
             InitializeComponent();
-            //WindowTest a = new WindowTest(); a.Show();
+            
             timer.Tick += new EventHandler(timerTick);
             timer.Interval = new TimeSpan(0, 0, 1);
 
@@ -144,17 +144,14 @@ namespace WpfAppPM02.Windows
         }
         #endregion
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-           
-        }
+        
         private int i = 0;
         private void LoginTextBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             i++;
             if (i == 3)
             {
-                PanelAdmin.Visibility = Visibility.Visible;
+               // PanelAdmin.Visibility = Visibility.Visible;
             }
         }
 

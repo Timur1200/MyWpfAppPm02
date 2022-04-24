@@ -22,13 +22,15 @@ namespace WpfAppPM02.Pages.Admin
         public static Storage GetStorage { get; set; }
         public MaterialPageList()
         {
-            InitializeComponent();
+            InitializeComponent();     
+        }
+        private void PageLoaded(object sender, RoutedEventArgs e)
+        {
             using (MyModel db = new MyModel())
             {
                 listStorage = db.Storage.ToList();
                 LViewMat.ItemsSource = listStorage;
             }
-            
         }
         private List<Storage> listStorage { get; set; }
 
@@ -60,5 +62,7 @@ namespace WpfAppPM02.Pages.Admin
         {
 
         }
+
+        
     }
 }
