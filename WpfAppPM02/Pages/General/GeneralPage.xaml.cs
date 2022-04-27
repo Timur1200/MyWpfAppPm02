@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfAppPM02.MyClass;
 
 namespace WpfAppPM02.Pages.General
 {
@@ -21,6 +22,7 @@ namespace WpfAppPM02.Pages.General
         public GeneralPage()
         {
             InitializeComponent();
+            HelloTextBlock.Text = $"Добро пожаловать, {Session.Fio} \n Ваша должность: {Session.NameRol} ";
         }
     }
 }

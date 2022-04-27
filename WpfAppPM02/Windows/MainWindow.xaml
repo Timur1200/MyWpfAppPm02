@@ -94,7 +94,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="30"/>
+            <RowDefinition Height="35"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
@@ -161,20 +161,27 @@
                 </StackPanel>
                 <!-- специалист -->
                 <StackPanel Name="SpecPanel">
-                    <Button Margin="10" Background="#FF8522BD" BorderBrush="#FF8522BD">
+                    <Button Click="QueryPageClick"  Margin="10" Background="#FF8522BD" BorderBrush="#FF8522BD">
                         <Grid Width="150">
-                            <materialDesign:PackIcon Kind="Account" VerticalAlignment="Center"/>
-                            <TextBlock HorizontalAlignment="Center" Text="Lox" FontFamily="Champagne &amp; Limousines"/>
+                            <materialDesign:PackIcon Kind="ContentPaste" VerticalAlignment="Center"/>
+                            <TextBlock HorizontalAlignment="Center" Text="Текущие вызовы" FontFamily="Champagne &amp; Limousines"/>
                         </Grid>
                     </Button>
+                    <Button Click="StorageManagerPageClick"  Margin="10" Background="#FF8522BD" BorderBrush="#FF8522BD">
+                        <Grid Width="150">
+                            <materialDesign:PackIcon Kind="Database" VerticalAlignment="Center"/>
+                            <TextBlock HorizontalAlignment="Center" Text="Склад" FontFamily="Champagne &amp; Limousines"/>
+                        </Grid>
+                    </Button>
+                    
                 </StackPanel>
 
                 <!-- сотрудник -->
                 <StackPanel Name="UserPanel">
-                    <Button Margin="10" Background="#FF8522BD" BorderBrush="#FF8522BD">
+                    <Button Click="QueryPageUserClick" Margin="10" Background="#FF8522BD" BorderBrush="#FF8522BD">
                         <Grid Width="150">
                             <materialDesign:PackIcon Kind="ContentPaste" VerticalAlignment="Center"/>
-                            <TextBlock HorizontalAlignment="Center" Text="TABELAS" FontFamily="Champagne &amp; Limousines"/>
+                            <TextBlock HorizontalAlignment="Center" Text="Запрос" FontFamily="Champagne &amp; Limousines"/>
                         </Grid>
                     </Button>
                 </StackPanel>
@@ -187,32 +194,29 @@
         <Grid x:Name="GridBarraTitulo" Grid.ColumnSpan="2" Background="#FF8522BD" MouseDown="GridBarraTitulo_MouseDown">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10,0">
 
-                <Button Click="BackClick" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="30" Height="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White">
+                <Button ToolTip="Назад" Click="BackClick" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="30" Height="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White">
                     <materialDesign:PackIcon Kind="ArrowBack"/>
                 </Button>
-                <TextBlock  FontFamily="WS Simple Gallifreyan" Margin="0,5" Foreground="White" FontSize="16" Text="Назад" />
+                <TextBlock  FontFamily="WS Simple Gallifreyan" Margin="0,8" Foreground="White" FontSize="16" Text="Назад" />
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10,0">
-                <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="25" Height="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White">
+                <Button FontSize="40" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="25" Height="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White">
                     <materialDesign:PackIcon Kind="Bell"/>
                 </Button>
-                <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="25" Height="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White">
+                <Button Click="ChangePasswordClick" ToolTip="Сменить пароль" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="25" Height="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White">
                     <materialDesign:PackIcon Kind="LockAdd"/>
                 </Button>
-                <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="25" Height="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White">
+                <Button Click="ReAuthClick" ToolTip="Сменить пользователя" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="25" Height="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White">
                     <materialDesign:PackIcon Kind="Account"/>
                 </Button>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10,0">
-                <Button  Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="25" Height="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" 
-                      Click="ReAuthClick"  >
-                    <materialDesign:PackIcon Kind="Account"   />
-                </Button>
-                <Button x:Name="ButtonFechar" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="25" Height="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White"  Cursor="Hand"
+                
+                <!--Button x:Name="ButtonFechar" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="25" Height="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White"  Cursor="Hand"
                         Click="CloseClick">
 
                     <materialDesign:PackIcon Kind="Power"/>
-                </Button>
+                </Button-->
             </StackPanel>
         </Grid>
     </Grid>

@@ -9,7 +9,7 @@
       Title="GeneralPage">
 
     <Grid>
-        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="Добро пожаловать!" FontSize="30" />
+        <TextBlock Name="HelloTextBlock" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Добро пожаловать!" FontSize="30" />
 
     </Grid>
 </Page>

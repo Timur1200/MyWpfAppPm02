@@ -15,8 +15,9 @@ using WpfAppPM02.MyClass;
 
 using WpfAppPM02.Pages.Admin;
 using WpfAppPM02.Pages.General;
-
+using WpfAppPM02.Pages.SpecPages;
 using WpfAppPM02.Pages.Storages;
+using WpfAppPM02.Pages.User;
 
 namespace WpfAppPM02.Windows
 {
@@ -122,6 +123,16 @@ namespace WpfAppPM02.Windows
         private void StorageManagerPageClick(object sender, RoutedEventArgs e)
         {
             Go(new StorageManagerPage());
+        }
+
+        private void QueryPageClick(object sender, RoutedEventArgs e)
+        {
+            Go(new ActualReqPage());
+        }
+
+        private void QueryPageUserClick(object sender, RoutedEventArgs e)
+        {
+            Nav.f2.Navigate(new QueryPage());
         }
     }
 }
