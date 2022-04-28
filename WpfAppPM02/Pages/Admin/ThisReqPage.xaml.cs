@@ -41,8 +41,8 @@ namespace WpfAppPM02.Pages.Admin
 
             if (GetQuire.Status==1 || GetQuire.Status==2)
             {
-                    
 
+                SearchTextBox.Visibility = Visibility.Hidden;
                     ComboBoxSelectSpec.Visibility = Visibility.Hidden;
                     Btn.Visibility = Visibility.Hidden;
                 TextBlockSpec.Text = "Специалист: " +GetQuire.Spec.FIo+ $" {GetQuire.Spec.Roli.NameRol}";

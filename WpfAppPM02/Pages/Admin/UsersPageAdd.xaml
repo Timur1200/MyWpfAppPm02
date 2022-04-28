@@ -1,16 +1,18 @@
 ﻿<Page x:Class="WpfAppPM02.Pages.Admin.UsersPageAdd"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WpfAppPM02.Pages.Admin"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
+      FontSize="18"
       Title="UsersPageAdd" Loaded="Page_Loaded"  >
 
-    <Grid>
+    <Grid Background="White">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.25*"></ColumnDefinition>
+            
             <ColumnDefinition Width="*" ></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
@@ -23,21 +25,21 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="Введите ФИО" FontSize="18" VerticalAlignment="Center" Margin="5" />
-        <TextBox x:Name="FioTextBox" Grid.Column="1" Margin="25" Height="30" />
+       
+        <TextBox materialDesign:HintAssist.Hint="Фио" x:Name="FioTextBox" Grid.Column="1" Margin="25,20" Height="30" />
 
-        <TextBlock  Grid.Row="1" Text="Введите Логин" FontSize="18" VerticalAlignment="Center" Margin="5" />
-        <TextBox x:Name="LoginTextBox" Grid.Row="1" Grid.Column="1" Margin="25" Height="30" />
+       
+        <TextBox materialDesign:HintAssist.Hint="Логин" x:Name="LoginTextBox" Grid.Row="1" Grid.Column="1" Margin="0" Height="30" />
 
-        <TextBlock Grid.Row="2" Text="Введите пароль" FontSize="18" VerticalAlignment="Center" Margin="5" />
-        <PasswordBox  x:Name="PassBox" Grid.Row="2" Grid.Column="1" Margin="25" Height="30" />
+        
+        <PasswordBox materialDesign:HintAssist.Hint="Пароль"  x:Name="PassBox" Grid.Row="2" Grid.Column="1" Margin="25" Height="30" />
 
-        <TextBlock Grid.Row="3" Text="Повторите пароль" FontSize="18" VerticalAlignment="Center" Margin="5" />
-        <PasswordBox x:Name="PassBox1" Grid.Row="3" Grid.Column="1" Margin="25" Height="30" />
+        
+        <PasswordBox materialDesign:HintAssist.Hint="Повторите пароль" x:Name="PassBox1" Grid.Row="3" Grid.Column="1" Margin="25" Height="30" />
 
-        <TextBlock Grid.Row="4" Text="Выберите должность" FontSize="18" VerticalAlignment="Center" Margin="5" />
-        <ComboBox DisplayMemberPath="NameRol" x:Name="RolComboBox" Margin="25,25,100,25" Height="30" Grid.Row="4" Grid.Column="1"/>
-        <Button Name="Btn3" Click="NewRolPageClick" Grid.Row="4" Grid.Column="1" Width="50" Content="..." FontSize="20" HorizontalAlignment="Right" Margin="20" />
+       
+        <ComboBox materialDesign:HintAssist.Hint="Роль" DisplayMemberPath="NameRol" x:Name="RolComboBox" Margin="25,25,25,25" Height="30" Grid.Row="4" Grid.Column="1"/>
+     
         <Button FontSize="20"   Margin="25" Height="30" Grid.ColumnSpan="2" Click="SaveClick" Content="Сохранить" Grid.Row="5"  />
 
     </Grid>
