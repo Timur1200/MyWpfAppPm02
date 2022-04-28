@@ -36,6 +36,10 @@ namespace WpfAppPM02.Pages.Admin
             ChartTypesComboBox.ItemsSource = Enum.GetValues(typeof(SeriesChartType));
 
         }
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            ChartTypesComboBox.SelectedItem = SeriesChartType.StackedBar;
+        }
 
         private void UpdateChart(object sender, SelectionChangedEventArgs e)
         {
@@ -57,5 +61,7 @@ namespace WpfAppPM02.Pages.Admin
 
             }
         }
+
+       
     }
 }

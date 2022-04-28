@@ -32,7 +32,7 @@
 
 
         <Canvas Grid.Row="1" Margin="0,2,0,-2">
-            <Button Click="AddClick" Margin="10" Width="150" HorizontalAlignment="Left" Background="Goldenrod" Height="50"  Content="Новый запрос"  />
+            <Button Click="AddClick" Margin="10" Width="150" HorizontalAlignment="Left"  Height="50"  Content="Новый запрос"  />
 
            
 

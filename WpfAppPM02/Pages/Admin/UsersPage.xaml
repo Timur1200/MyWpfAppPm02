@@ -27,13 +27,13 @@
         
         
         <Canvas Grid.Row="1" Margin="0,2,0,-2">
-            <Button FontSize="18" Click="AddClick" Margin="10" Width="150" HorizontalAlignment="Left" Background="Goldenrod" Height="50"  Content="Добавить"  />
+            <Button FontSize="18" Click="AddClick" Margin="10" Width="150" HorizontalAlignment="Left" Height="50"  Content="Добавить"  />
 
-            <Button FontSize="18" Click="DelClick" Margin="200,10,10,10" Width="150"   Background="Goldenrod" Height="50"  Content="Удалить"  />
+            <Button FontSize="18" Click="DelClick" Margin="200,10,10,10" Width="150"    Height="50"  Content="Удалить"  />
 
-            <Button FontSize="18" Click="UpdateClick" Margin="390,10,10,10" Width="150"   Background="Goldenrod" Height="50"  Content="Редактирование"  />
+            <Button FontSize="18" Click="UpdateClick" Margin="390,10,10,10" Width="180"    Height="50"  Content="Редактирование"  />
 
-            <Button FontSize="18" x:Name="BtnVisiblePass" Click="VisibleClick" Margin="590,10,10,10" Width="150"   Background="Goldenrod" Height="50"  Content="Показать пароль"  />
+            <Button FontSize="18" x:Name="BtnVisiblePass" Click="VisibleClick" Margin="590,10,10,10" Width="180"   Height="50"  Content="Показать пароль"  />
 
         </Canvas>
         

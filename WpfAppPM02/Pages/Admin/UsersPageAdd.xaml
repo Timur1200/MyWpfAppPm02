@@ -12,35 +12,39 @@
 
     <Grid Background="White">
         <Grid.ColumnDefinitions>
-            
+
             <ColumnDefinition Width="*" ></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
+
         </Grid.RowDefinitions>
 
+        <StackPanel  Margin="15" VerticalAlignment="Center" >
+            <TextBox materialDesign:HintAssist.Hint="Фио" x:Name="FioTextBox"  Height="30" />
+
+            <TextBlock />
+
+            <TextBox materialDesign:HintAssist.Hint="Логин" x:Name="LoginTextBox" Height="30" />
+
+            <TextBlock />
+
+            <PasswordBox materialDesign:HintAssist.Hint="Пароль"  x:Name="PassBox" Height="30" />
+
+            <TextBlock />
+
+            <PasswordBox materialDesign:HintAssist.Hint="Повторите пароль" x:Name="PassBox1"  Height="30" />
+
+            <TextBlock />
+
+            <ComboBox materialDesign:HintAssist.Hint="Роль" DisplayMemberPath="NameRol" x:Name="RolComboBox"  Height="30" VerticalAlignment="Top"/>
+
+            <TextBlock />
+            
+            <Button FontSize="20" Width="200"  Height="40" Click="SaveClick" Content="Сохранить"  />
+        </StackPanel>
        
-        <TextBox materialDesign:HintAssist.Hint="Фио" x:Name="FioTextBox" Grid.Column="1" Margin="25,20" Height="30" />
-
-       
-        <TextBox materialDesign:HintAssist.Hint="Логин" x:Name="LoginTextBox" Grid.Row="1" Grid.Column="1" Margin="0" Height="30" />
-
-        
-        <PasswordBox materialDesign:HintAssist.Hint="Пароль"  x:Name="PassBox" Grid.Row="2" Grid.Column="1" Margin="25" Height="30" />
-
-        
-        <PasswordBox materialDesign:HintAssist.Hint="Повторите пароль" x:Name="PassBox1" Grid.Row="3" Grid.Column="1" Margin="25" Height="30" />
-
-       
-        <ComboBox materialDesign:HintAssist.Hint="Роль" DisplayMemberPath="NameRol" x:Name="RolComboBox" Margin="25,25,25,25" Height="30" Grid.Row="4" Grid.Column="1"/>
-     
-        <Button FontSize="20"   Margin="25" Height="30" Grid.ColumnSpan="2" Click="SaveClick" Content="Сохранить" Grid.Row="5"  />
 
     </Grid>
 </Page>

@@ -45,7 +45,7 @@ namespace WpfAppPM02.Pages.Admin
             
             FioTextBox.Text = mUser.Fio;
             LoginTextBox.Text = mUser.Login;
-            List<Roli> b = Data.SelectRoli0();
+            List<Roli> b = MyModel.GetContext().Roli.ToList();
             int i = 0;
            
             Roli r = mUser.Roli;
@@ -68,7 +68,7 @@ namespace WpfAppPM02.Pages.Admin
 
             FioTextBox.Text = mSpec.FIo;
             LoginTextBox.Text = mSpec.Login;
-            List<Roli> b = Data.SelectRoli1();
+            List<Roli> b = MyModel.GetContext().Roli.ToList();
             int i = 0;
 
             Roli r = mSpec.Roli;
@@ -143,8 +143,9 @@ namespace WpfAppPM02.Pages.Admin
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-           if (IsSpecPage == true) RolComboBox.ItemsSource = Data.SelectRoli1();
-           else RolComboBox.ItemsSource = Data.SelectRoli0();
+            RolComboBox.ItemsSource = MyModel.GetContext().Roli.ToList();
+          // if (IsSpecPage == true) RolComboBox.ItemsSource = Data.SelectRoli1();
+          // else RolComboBox.ItemsSource = Data.SelectRoli0();
            
         }
     }
