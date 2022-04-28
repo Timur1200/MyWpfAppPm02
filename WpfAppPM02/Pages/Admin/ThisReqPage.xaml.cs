@@ -65,13 +65,31 @@ namespace WpfAppPM02.Pages.Admin
         {
             var a = Data.SelectOnlySpec();
             ComboBoxSelectSpec.ItemsSource = a;
+            _ListSpec = a;
         }
-
+        List<Spec> _ListSpec { get; set; } 
         private void BtnClick(object sender, RoutedEventArgs e)
         {
           Spec getSpec = (Spec)ComboBoxSelectSpec.SelectedItem;
             Data.UpdatqQuireTo1(GetQuire,getSpec);
             Nav.Back2();
+        }
+
+        private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+            if (SearchTextBox.Text == "")
+            {
+
+                ComboBoxSelectSpec.ItemsSource = _ListSpec;
+                ComboBoxSelectSpec.SelectedItem = null;
+                return;
+            }
+            ComboBoxSelectSpec.IsDropDownOpen = true;
+            string Text = SearchTextBox.Text;
+
+
+            ComboBoxSelectSpec.ItemsSource = MyModel.GetContext().Spec.Where(q => q.FIo.Contains(Text)).ToList();
         }
     }
 }

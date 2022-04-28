@@ -6,7 +6,9 @@
       xmlns:local="clr-namespace:WpfAppPM02.Pages.Admin"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
+      FontSize="18"
       Title="AddRolPage">
+        
 
     <Grid>
         <StackPanel Height="auto"  Margin="40" VerticalAlignment="Center">

@@ -6,6 +6,7 @@
       xmlns:local="clr-namespace:WpfAppPM02.Pages.Admin"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
+      FontSize="18"
       Title="ReqPage" Loaded="Page_Loaded">
 
     <Grid>
@@ -35,7 +36,7 @@
 
         <StackPanel Grid.Row="1" Orientation="Horizontal">
             
-            <Button Margin="10,30" Click="WordClick" Width="200"  Background="Gold" FontSize="16" Height="30" Content="Печать"  />
+            <Button Margin="10,30" Click="WordClick" Width="200"   FontSize="16" Height="30" Content="Печать"  />
             <StackPanel Margin="10,0">
                 <TextBlock Text="Выборка выполненых заявок за период" FontSize="15" />
                 <DatePicker Name="DPicker1" SelectedDateChanged="DatePicker_SelectedDateChanged" Margin="0,5" FontSize="16" />

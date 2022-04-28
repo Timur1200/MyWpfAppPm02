@@ -33,7 +33,7 @@ namespace WpfAppPM02.Windows
         public LoginWindow()
         {
             InitializeComponent();
-            
+          
             timer.Tick += new EventHandler(timerTick);
             timer.Interval = new TimeSpan(0, 0, 1);
 

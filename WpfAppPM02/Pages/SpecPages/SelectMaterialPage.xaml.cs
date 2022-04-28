@@ -58,14 +58,14 @@ namespace WpfAppPM02.Pages.SpecPages
                 db.Storage.Attach(b);
                 b.Amount -= ml.AmountInList;
                 db.SaveChanges();
-                Nav.Back1();
+                Nav.Back2();
                 MessageBox.Show("Добавлено!");
             }
         }
 
         private void BackClick(object sender, RoutedEventArgs e)
         {
-            Nav.Back1();
+            Nav.Back2();
         }
     }
 }

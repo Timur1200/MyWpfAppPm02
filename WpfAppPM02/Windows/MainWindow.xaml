@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfAppPM02.Windows"
         mc:Ignorable="d"
-        Title="" Height="700" Width="1200" Icon="..\Resources\iconWpf.jpg">
+        Title="Лениногорский Нефтяной Техникум" Height="700" Width="1300" Icon="..\Resources\iconWpf.jpg">
     <Window.Resources>
         <ResourceDictionary>
             <Style x:Key="ScrollThumbs" TargetType="{x:Type Thumb}">

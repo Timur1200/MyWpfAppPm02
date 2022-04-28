@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using WpfAppPM02.DataBase;
 using WpfAppPM02.MyClass;
 using System.Data.Entity;
+using WpfAppPM02.Windows;
 
 namespace WpfAppPM02.Pages.Admin
 {
@@ -96,6 +97,12 @@ namespace WpfAppPM02.Pages.Admin
                 DataGridUsers.Items.Refresh();
 
             }
+        }
+
+        private void ChartClick(object sender, RoutedEventArgs e)
+        {
+            WindowTest windowTest = new WindowTest();
+            windowTest.Show();
         }
     }
 }

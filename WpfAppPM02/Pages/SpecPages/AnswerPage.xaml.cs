@@ -84,7 +84,7 @@ namespace WpfAppPM02.Pages.SpecPages
 
         private void BtnClick1(object sender, RoutedEventArgs e)
         {
-            Nav.f1.Navigate(new SelectMaterialPage(quire));
+            Nav.f2.Navigate(new SelectMaterialPage(quire));
         }
 
         private void BtnClick2(object sender, RoutedEventArgs e)

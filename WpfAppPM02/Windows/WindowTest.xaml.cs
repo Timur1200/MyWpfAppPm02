@@ -15,6 +15,7 @@ using System.Data.Entity;
 using WpfAppPM02.DataBase;
 using WpfAppPM02.Windows;
 using WpfAppPM02.MyClass;
+using WpfAppPM02.Pages.Admin;
 
 namespace WpfAppPM02.Windows
 {
@@ -24,19 +25,7 @@ namespace WpfAppPM02.Windows
         public WindowTest()
         {
             InitializeComponent();
-            using (MyModel db = new MyModel())
-            {
-                var quire = from q in db.Quire
-                            where q.SpecId != null
-                            select q;
-
-                var qq = db.Quire.Include(p => p.Spec).Include(p=>p.Users).Where(p => p.SpecId != null).ToList();
-              
-                qwer.ItemsSource = qq;
-                
-                
-
-            }
+            MainFrame.Navigate(new ChartsPage());
 
         }
     }

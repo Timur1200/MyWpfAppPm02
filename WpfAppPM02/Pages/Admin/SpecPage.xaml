@@ -5,10 +5,11 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WpfAppPM02.Pages.Admin"
       mc:Ignorable="d" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="SpecPage" Loaded="Page_Loaded">
 
-    <Grid>
+    <Grid Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="0.25*"></RowDefinition>
@@ -19,22 +20,43 @@
                 <DataGridTextColumn Header="ФИО" Binding="{Binding FIo}" />
                 <DataGridTextColumn Header="Логин" Binding="{Binding Login}" />
                 <DataGridTextColumn Header="Роль" Binding="{Binding Roli.NameRol}" />
+                <DataGridTextColumn Visibility="Hidden" x:Name="DGColumnPass" Header="Пароль" Binding="{Binding Pass}" />
                 <DataGridTextColumn Header="Заявок за месяц" Binding="{Binding MounthOrder}" />
                 <DataGridTextColumn Header="Всего заявок" Binding="{Binding AllOrder}" />
                 <DataGridTextColumn Header="За опред. период" Binding="{Binding Select}" />
                 <!--DataGridTextColumn Header="Статус" Binding="{Binding TextStatus}" /-->
-                <DataGridTextColumn Visibility="Hidden" x:Name="DGColumnPass" Header="Пароль" Binding="{Binding Pass}" />
+                
                 
             </DataGrid.Columns>
         </DataGrid>
         <StackPanel Grid.Row="1" Orientation="Horizontal">
-            <Button Click="AddClick" Width="100"  Margin="10,0" FontSize="14"  Background="Goldenrod" Height="50"  Content="Добавить"  />
+            <Button Click="AddClick" Margin="10,0"  Width="120" Height="50"   >
+                <Grid Width="100">
+                    <materialDesign:PackIcon Kind="ApplicationEdit" VerticalAlignment="Center"/>
+                    <TextBlock HorizontalAlignment="Center" Text="Добавить" FontFamily="Champagne &amp; Limousines"/>
+                </Grid>
+            </Button>
+            <Button Click="UpdateClick" Margin="0,0" Width="160"  Height="50"    >
+                <Grid Width="150">
+                    <materialDesign:PackIcon Kind="ApplicationEdit" VerticalAlignment="Center"/>
+                    <TextBlock HorizontalAlignment="Center" Text="Редактировать" FontFamily="Champagne &amp; Limousines"/>
+                </Grid>
+            </Button>
+            <Button Click="DelClick" Margin="10,0" Width="140"   Height="50" >
+                <Grid Width="150">
+                    <materialDesign:PackIcon Kind="ApplicationEdit" VerticalAlignment="Center"/>
+                    <TextBlock HorizontalAlignment="Center" Text="Удалить" FontFamily="Champagne &amp; Limousines"/>
+                </Grid>
+            </Button>
 
-            <Button Click="DelClick" Width="100"   Background="Goldenrod" Height="50" FontSize="14"  Content="Удалить"  />
+            <Button Click="ChartClick" Margin="0,0" Width="140"   Height="50" >
+                <Grid Width="150">
+                    <materialDesign:PackIcon Kind="ApplicationEdit" VerticalAlignment="Center"/>
+                    <TextBlock HorizontalAlignment="Center" Text="График" FontFamily="Champagne &amp; Limousines"/>
+                </Grid>
+            </Button>
 
-            <Button Click="UpdateClick"  Width="120" Margin="10,0" FontSize="14" Background="Goldenrod" Height="50"  Content="Редактирование"  />
-
-            <Button x:Name="BtnVisiblePass" Click="VisibleClick" Width="150" FontSize="14"  Background="Goldenrod" Height="50"  Content="Показать пароль"  />
+            <Button Margin="10,0" x:Name="BtnVisiblePass" Click="VisibleClick" Width="150" FontSize="14"   Height="50"  Content="Показать пароль"  />
             <StackPanel Margin="10,0">
                 <TextBlock Text="Выборка выполненых заявок за период" FontSize="15" />
                 <DatePicker Name="DPicker1" SelectedDateChanged="DatePicker_SelectedDateChanged" Margin="0,5" FontSize="16" />
