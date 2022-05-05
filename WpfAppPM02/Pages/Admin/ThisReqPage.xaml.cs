@@ -89,7 +89,7 @@ namespace WpfAppPM02.Pages.Admin
             string Text = SearchTextBox.Text;
 
 
-            ComboBoxSelectSpec.ItemsSource = MyModel.GetContext().Spec.Where(q => q.FIo.Contains(Text)).ToList();
+            ComboBoxSelectSpec.ItemsSource = MyModel.GetContext().Spec.Where(q => q.FIo.Contains(Text) && q.Rol_Id==2).ToList();
         }
     }
 }
