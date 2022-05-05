@@ -120,7 +120,7 @@
             </Grid.Effect>
 
             <Grid Background="#FFA46FE4">
-                <TextBlock Text="Добро пожаловать!" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="WS Simple Gallifreyan" Foreground="#FFBC96EA" FontSize="16"/>
+                <TextBlock Text="" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="WS Simple Gallifreyan" Foreground="#FFBC96EA" FontSize="16"/>
             </Grid>
             <!-- Панель кнопок -->
             <StackPanel Grid.Row="1">
