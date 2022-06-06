@@ -56,23 +56,18 @@ namespace WpfAppPM02.Windows
 
             }
         }
+        // метод, который выполняет авторизацию
         private void AuthClick(object sender, RoutedEventArgs e)
-        {
+        {  
             if (ChechBoxPass.IsChecked.Value) PassBox.Password = PassBox1.Text;
-
             try
-            {
-                MyModel ww = new MyModel();
+            { // 
                 using (MyModel db = new MyModel())
                 {
-
-
                     foreach (Spec a in db.Spec.Include(a => a.Roli))
                     {
                         if (LoginTextBox.Text == a.Login && PassBox.Password == a.Pass)
                         {
-
-
                             if (a.Roli.Access == 2)
                             {
                                 Session.Auth(a);
@@ -87,13 +82,9 @@ namespace WpfAppPM02.Windows
                                 win.Show();
                                 this.Close();
                             }
-
                             return;
-
-
                         }
                     }
-
                     foreach (Users a in db.Users.Include(a => a.Roli))
                     {
                         if (LoginTextBox.Text == a.Login && PassBox.Password == a.Pass)
@@ -115,10 +106,10 @@ namespace WpfAppPM02.Windows
                     }
                 }
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString(), ex.Message);
-                    }
+            }
         }
         #region test
         private void adminClick(object sender, RoutedEventArgs e)

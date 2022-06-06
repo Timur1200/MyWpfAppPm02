@@ -14,7 +14,7 @@
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"
         Background="{DynamicResource MaterialDesignPaper}"
-        FontFamily="{DynamicResource MaterialDesignFont}"
+        FontFamily="{DynamicResource ResourceKey=MaterialDesignFont}"
         
          >
     <Grid >
@@ -51,6 +51,7 @@
 
                         <Button Click="AuthClick" x:Name="BtnAuth" 
                                 HorizontalAlignment="Center" 
+                               
                                 FontSize="20" Content="Войти" />
 
 
