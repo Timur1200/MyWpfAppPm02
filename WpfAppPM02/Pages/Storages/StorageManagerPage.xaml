@@ -16,6 +16,9 @@
             <TabItem Header="Список материалов">
                 <Frame Name="TabItemFrame2"/>
             </TabItem>
+            <TabItem Header="История">
+                <Frame Name="TabItemFrame3"/>
+            </TabItem>
         </TabControl>
     </Grid>
 </Page>

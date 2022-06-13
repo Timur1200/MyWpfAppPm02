@@ -17,7 +17,7 @@
         </Grid.RowDefinitions>
 
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-            
+            <TextBlock Text="Тип диаграммы  " />
             <ComboBox SelectionChanged="UpdateChart" Width="150" Name="ChartTypesComboBox" />
         </StackPanel>
 

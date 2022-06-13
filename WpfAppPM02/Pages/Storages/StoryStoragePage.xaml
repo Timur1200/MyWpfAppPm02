@@ -1,0 +1,25 @@
+﻿<Page x:Class="WpfAppPM02.Pages.Storages.StoryStoragePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfAppPM02.Pages.Storages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Loaded="Page_Loaded"
+      Title="StoryStoragePage">
+
+    <Grid>
+        <DataGrid IsReadOnly="True" AutoGenerateColumns="False" Name="StoryDataGrid">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Дата" Binding="{Binding Quire.Date2D}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Материал" Binding="{Binding Storage.MaterialName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Количество" Binding="{Binding AmountInList}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Специалист" Binding="{Binding Quire.Spec.FIo}"></DataGridTextColumn>
+            </DataGrid.Columns>
+           
+            
+        </DataGrid>
+        
+    </Grid>
+</Page>
