@@ -60,7 +60,7 @@ namespace WpfAppPM02.Windows
         private void AuthClick(object sender, RoutedEventArgs e)
         {  
             if (ChechBoxPass.IsChecked.Value) PassBox.Password = PassBox1.Text;
-            try
+           // try
             { // 
                 using (MyModel db = new MyModel())
                 {
@@ -106,10 +106,10 @@ namespace WpfAppPM02.Windows
                     }
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString(), ex.Message);
-            }
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.ToString(), ex.Message);
+            //}
         }
         #region test
         private void adminClick(object sender, RoutedEventArgs e)
